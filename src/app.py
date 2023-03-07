@@ -67,6 +67,7 @@ def traductor2():
 
 @app.route('/register', methods=['POST'])
 def register():
+    print("gdfjklghdfklfgjn")
     body = request.get_json()
     email = body['email']
     password = body['password']
@@ -82,6 +83,8 @@ def register():
     db.session.commit()
     
     return jsonify({'email':email,'password':password, 'fullname':fullname, 'address1':address1, 'address2':address2, 'city':city, 'state':state, 'npostal':npostal})
+
+
 
 @app.route('/login', methods=['POST'])
 def login():
